@@ -1,0 +1,74 @@
+"""
+iterator:
+=========
+
+
+value=[1,2,3]
+
+iterate=iter(value)
+
+print(next(iterate))
+print(next(iterate))
+print(next(iterate))
+
+
+#program2
+class Iterator:
+    def __iter__(self):
+        self.a=1
+        return self
+    def __next__(self):
+        x=self.a
+        print(x)
+        self.a+=1
+        
+number=Iterator()
+i=iter(number)
+next(i)
+
+Generator:
+===========
+return = yield
+
+#program 1
+
+def func():
+    yield 1
+    yield 2
+    yield 3
+
+
+a=func()
+print(next(a))
+print(next(a))
+print(next(a))
+
+
+
+#closure:
+
+#nested function
+
+def data(initial):
+    def inc(inc):
+        return initial+inc
+    return inc
+
+d1=data(45)
+print(d1(10))
+
+d2=data(100)
+print(d2(23))
+
+
+Decorator:
+==========
+different name can be bound in a same function object.
+"""
+
+def karur(msg):
+    print("welcome",msg)
+
+karur("karur")
+chennai=karur
+chennai("chennai")

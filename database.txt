@@ -1,0 +1,186 @@
+"""
+Database connectivity:
+======================
+database---record
+
+file ----> program output data will be stored in notepad
+
+database--->create ,modify,delete
+
+
+sql,mysql,oracle
+
+front end :  program(log in page)
+back end  :  storage(mysql)
+
+
+#program1
+#mysql to python connection
+
+import mysql.connector
+sql_connection=mysql.connector.connect(host="localhost",user="root",password="12345")
+print(sql_connection)
+print("mysql to python was connected successfully...")
+
+
+#program2
+#create database
+
+import mysql.connector
+connection=mysql.connector.connect(host="localhost",user="root",password="1234")
+
+print("mysql to python was connected successfully...")
+
+qry=connection.cursor()#create cursor
+
+qry.execute("create database student")
+print("Database created successfully...")
+
+
+
+#program3
+#show database
+
+import mysql.connector
+connection=mysql.connector.connect(host="localhost",user="root",password="12345")
+
+print("mysql to python was connected successfully...")
+
+qry=connection.cursor()#create cursor
+qry.execute("show databases")
+
+for db_list in qry:
+    print(db_list)
+print("Database listed successfully...")
+
+#program4
+#create table
+
+import mysql.connector
+connection=mysql.connector.connect(host="localhost",user="root",password="12345",database="student")
+
+print("mysql to python was connected successfully...")
+
+qry=connection.cursor()#create cursor
+qry.execute("create table student_details (name varchar(255),location varchar(255))")
+print("Create a table successfully...")
+
+
+#program5
+#modify table(add a column)
+
+import mysql.connector
+connection=mysql.connector.connect(host="localhost",user="root",password="12345",database="student")
+
+print("mysql to python was connected successfully...")
+
+qry=connection.cursor()#create cursor
+qry.execute("alter table student_details add column s_no int")
+print("Add a new column  successfully...")
+
+
+
+#program6
+#insert a record
+
+import mysql.connector
+connection=mysql.connector.connect(host="localhost",user="root",password="1234",database="student")
+
+print("mysql to python was connected successfully...")
+
+qry=connection.cursor()#create cursor
+
+
+qry.execute("insert into student_details(name,location,s_no)values('Abirami','Dindugul','1')")
+
+connection.commit()#use data any modification
+print("Add a new column  successfully...")
+
+qry.close()
+connection.close()
+
+
+#program 7: insert multiple record
+
+import mysql.connector
+
+con=mysql.connector.connect(host="localhost",user="root",password="1234",database="student")
+
+qry=con.cursor()
+qry.execute("insert into student_details(name,location,s_no)values('Deepika','Thanthonimalai',2),('Prabhakaran','Paramathi',3),('savitha','chathram',4),('Elakkiya','Dindugul',5)")
+con.commit()
+qry.close()
+con.close()
+
+
+#program 8 : Display records
+
+import mysql.connector
+con=mysql.connector.connect(host="localhost",user="root",password="1234",database="student")
+
+qry=con.cursor()
+qry.execute("select * from student_details")
+
+record1=qry.fetchone()#fetch one record
+print(record1)
+
+
+record=qry.fetchall()#fetch all record
+
+for data in record:
+    print(data)
+qry.close()
+con.close()
+
+
+#program 8 : Display particular records
+
+import mysql.connector
+con=mysql.connector.connect(host="localhost",user="root",password="1234",database="student")
+
+qry=con.cursor()
+qry.execute("select * from student_details where location='dindugul'")
+
+record=qry.fetchall()#fetch all record
+
+for data in record:
+    print(data)
+qry.close()
+con.close()
+
+#Program 9: update records
+
+import mysql.connector
+con=mysql.connector.connect(host="localhost",user="root",password="1234",database="student")
+
+qry=con.cursor()
+qry.execute("update student_details set location='Trichy' where location='Thanthonimalai'")
+
+con.commit()
+qry.close()
+con.close()
+
+
+#program 10: delete a particular records
+
+import mysql.connector
+con=mysql.connector.connect(host="localhost",user="root",password="1234",database="student")
+
+qry=con.cursor()
+qry.execute("delete from student_details where name='prabhakaran'")
+con.commit()
+qry.close()
+con.close()
+
+
+#program 11: delete a table
+
+
+import mysql.connector
+con=mysql.connector.connect(host="localhost",user="root",password="1234",database="student")
+
+qry=con.cursor()
+qry.execute("drop table student_details")
+con.commit()
+qry.close()
+con.close()

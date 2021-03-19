@@ -1,0 +1,338 @@
+"""
+#main window
+import tkinter
+mw=tkinter.Tk()#main window
+mw.mainloop()#only user do close it will close otherwise not close
+
+
+#message box
+import tkinter
+from tkinter import messagebox
+mw=tkinter.Tk()
+messagebox.showerror("Error","File missing")
+messagebox.showwarning("warnng","no space")
+messagebox.showinfo("information","installed successfully!")
+mw.mainloop()
+
+
+#messagebox---->main window hide
+import tkinter
+from tkinter import messagebox
+mw=tkinter.Tk()#create main window
+mw.withdraw()#hide the main window
+messagebox.showerror("Error","File missing!")
+messagebox.showwarning("Warning","no space required!")
+messagebox.showinfo("Information","File installed successfully!")
+mw.mainloop()
+
+
+
+#app name
+import tkinter
+mw=tkinter.Tk()
+mw.title("Livewire")
+mw.mainloop()
+
+
+#change the size of main window
+
+import tkinter
+mw=tkinter.Tk()
+mw.title("Livewire")
+#mw.geometry("500x500")
+mw.geometry("1500x1500")#full screen(1500x1500 --- default)
+mw.mainloop()
+
+
+#iconbitmap image(icon)
+import tkinter
+
+mw=tkinter.Tk()
+mw.title("Livewire")
+mw.geometry("500x500")
+#mw.wm_iconbitmap("logo2.ico")
+mw.mainloop()
+
+
+Tkinter widgets:
+================
+button,checkbutton,combobox,frame,Label,listbox
+
+
+#Label Box,button
+
+import tkinter
+from tkinter import messagebox
+def show():
+    messagebox.showinfo("information","Button is clicked...")
+mw=tkinter.Tk()
+mw.title("Livewire")
+mw.geometry("1500x1500")
+
+label1=tkinter.Label(mw,text="Welcome to GUI Application")
+label2=tkinter.Label(mw,text="Python programming",font=("Courier New Bold italic",22))
+#lab.pack()
+label1.grid(column=0,row=0)
+label2.grid(column=1,row=1)
+b1=tkinter.Button(mw,text="Click Me",font=("Courier New Bold",20),command=show,bg="grey",fg="white")
+b1.grid(column=1,row=2)
+mw.mainloop()
+
+
+
+from tkinter import *
+from tkinter import messagebox
+
+
+def show():
+    messagebox.showinfo("information","cicked the buttons")
+mw=Tk()
+mw.title("Livewire")
+mw.geometry("500x500")
+
+l1=Label(mw,text="Helo")
+l1.grid(column=1,row=0)
+
+but=Button(mw,text="show",command=show,fg="red",bg="white")
+but.grid(column=1,row=1)
+mw.mainloop()
+
+
+
+from tkinter import *
+
+win=Tk()
+win.geometry("500x500")
+l1=Label(win,text="helo")
+def clickme():
+    l1.configure(text="button clicked")
+
+but=Button(win,text="click me",command=clickme)
+
+l1.grid(column=0,row=0)
+but.grid(column=1,row=0)
+win.mainloop()
+
+
+
+#create textbox
+from tkinter import *
+
+win=Tk()
+win.geometry("500x500")
+l1=Label(win,text="user name : ")
+
+txt=Entry(win,width=20)
+txt.grid(column=1,row=0)
+def clickme():
+    but.configure(text="button clicked")
+
+but=Button(win,text="submit",command=clickme)
+
+l1.grid(column=0,row=0)
+but.grid(column=2,row=0)
+win.mainloop()
+
+
+
+
+#display textbox data 
+from tkinter import *
+
+win=Tk()
+win.geometry("500x500")
+l1=Label(win,text="user name : ")
+
+txt=Entry(win,width=20)
+txt.grid(column=1,row=0)
+def clickme():
+    msg=txt.get()
+    but.configure(text=msg)
+
+but=Button(win,text="submit",command=clickme)
+
+l1.grid(column=0,row=0)
+but.grid(column=2,row=0)
+win.mainloop()
+
+
+#check button
+
+from tkinter import *
+
+win=Tk()
+win.title("video editor")
+win.geometry("500x500")
+#state=BooleanVar()
+state=IntVar()
+chk1=Checkbutton(win,text="c program",var=state)
+chk2=Checkbutton(win,text="c++ program",var=state)
+chk3=Checkbutton(win,text="java",var=state)
+chk4=Checkbutton(win,text="python",var=state)
+state.set(1)
+chk1.grid(column=0,row=0)
+chk2.grid(column=0,row=1)
+chk3.grid(column=0,row=2)
+chk4.grid(column=0,row=3)
+win.mainloop()
+
+
+#radio button
+from tkinter import *
+
+win=Tk()
+win.title("video editor")
+win.geometry("500x500")
+r1=Radiobutton(win,text="c program",value=1)
+r2=Radiobutton(win,text="c++ program",value=2)
+r3=Radiobutton(win,text="java",value=3)
+r4=Radiobutton(win,text="python",value=4)
+r1.grid(column=0,row=0)
+r2.grid(column=1,row=0)
+r3.grid(column=2,row=0)
+r4.grid(column=3,row=0)
+win.mainloop()
+
+
+from tkinter import *
+
+win=Tk()
+win.title("video editor")
+win.geometry("500x500")
+r1=Radiobutton(win,text="c program",value=1)
+r2=Radiobutton(win,text="c++ program",value=2)
+r1.grid(column=0,row=0)
+r2.grid(column=1,row=0)
+win.mainloop()
+
+
+#messgebox
+
+from tkinter import messagebox
+import tkinter
+
+tk=tkinter.Tk()
+tk.withdraw()
+m1=messagebox.askquestion("Message","Do you want do continue?")
+m1=messagebox.askyesno("Message","Do you want do continue?")
+m1=messagebox.askyesnocancel("Message","Do you want do continue?")
+m1=messagebox.askokcancel("Message","Do you want do continue?")
+m1=messagebox.askretrycancel ("Message","Do you want do continue?")
+ 
+
+
+
+
+#examples
+import tkinter
+from tkinter import messagebox
+t=tkinter.Tk()
+t.geometry("500x500")
+def event():
+    messagebox.showinfo("form","submitted form")
+
+b1=tkinter.Button(t,text="submit",command=event)
+b1.pack()
+b2=tkinter.Button(t,text="close")
+b2.pack()
+b3=tkinter.Button(t,text="Login")
+b3.pack()
+ 
+t1=tkinter.Entry(t,width=20)
+t1.pack()
+
+c1=tkinter.Checkbutton(t,text="one")
+c2=tkinter.Checkbutton(t,text="one")
+c1.pack()
+c2.pack()
+l1=tkinter.Listbox(t)
+l1.insert(1,"c Programming")
+l1.insert(2,"c++ Programming")
+l1.insert(3,"java Programming")
+l1.insert(4,"python Programming")
+l1.pack()
+
+r1=tkinter.Radiobutton(t,text="one")
+r2=tkinter.Radiobutton(t,text="Two")
+r1.pack()
+r2.pack()
+t.mainloop()
+
+
+
+
+#
+
+import tkinter
+from tkinter import messagebox
+
+def task():
+    if e1.get() or e2.get()=="":
+        messagebox.showinfo("Invalid Input","Please Enter username and Password")
+    else:
+        print("User name : %s\nPassword : %s"%(e1.get(),e2.get()))
+
+    if e1.get()=="Livewire" and e2.get()=="Livewire":
+        messagebox.showinfo("Log in","Log in Successfully")
+    else:
+        messagebox.showinfo("Log in","Unable to Log in")
+
+
+win=tkinter.Tk()
+win.geometry("500x500")
+
+l1=tkinter.Label(win,text="username ")
+l2=tkinter.Label(win,text="password ")
+e1=tkinter.Entry(win)
+e2=tkinter.Entry(win)
+b1=tkinter.Button(win,text="submit",command=task)
+
+l1.pack()
+e1.pack()
+l2.pack()
+e2.pack()
+b1.pack()
+win.title("Application")
+#win.configure(background="orange")
+
+
+win.mainloop()
+
+"""
+#file menu
+
+from tkinter import *
+
+def donothing():
+    filewin=Toplevel(root)
+    button=Button(filewin,text="do nothing")
+    button.pack()
+root=Tk()
+root.geometry("500x500")
+menubar=Menu(root)
+filemenu=Menu(menubar)
+filemenu.add_command(label="New file",command=donothing)
+filemenu.add_command(label="open")
+filemenu.add_command(label="open Module")
+filemenu.add_command(label="Recent Files")
+filemenu.add_command(label="Class Browser")
+filemenu.add_command(label="Path Browser")
+filemenu.add_separator()
+filemenu.add_command(label="save")
+filemenu.add_command(label="save copy as")
+filemenu.add_separator()
+#filemenu.add_seperator()
+filemenu.add_command(label="print")
+filemenu.add_sepa rator()
+filemenu.add_command(label="Close")
+filemenu.add_command(label="Exit")
+edit=Menu(menubar)
+edit.add_command(label="Undo")
+edit.add_command(label="Redo")
+
+
+menubar.add_cascade(label="File",menu=filemenu)
+menubar.add_cascade(label="Edit",menu=edit)
+
+root.config(menu=menubar)
+root.mainloop()

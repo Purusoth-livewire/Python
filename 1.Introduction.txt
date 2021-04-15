@@ -1,0 +1,94 @@
+		Python Programing
+		=================
+
+Introduction:
+============
+	Python is Object Oriented, Interpreter Programming language.
+	It is used to Develape some Software Application & websites.
+	It is develaped by Guido Van Rossum in 1985-1990 at National Research Institute For Mathematics And Computer science
+in Netherlands.
+	He was watch comedy drama of  "Monty Python circus",so he got that Name.
+ 
+Why using Python?
+================
+	1.It will Software Quality.
+	2.Readable & Maintainable.
+	3.Increase Develaper Productivity.
+		Less to type,Less to Debug,Less to Maintain
+	4.1:5th code in another Language.
+	5.Program Portablity.
+		Ability to run Differtent platform.----(.py Extension)
+	6.Support Huge set Of Libraries.
+	7.Easy To Learn.
+
+Who Using Python?
+================
+	1.Many big Industries,Small & Startup companies.
+	2.Google------Web Search Systems
+	3.Youtube----Video Sharing
+	4.Dropbox----Storage Space
+	5.Rasperry pi---project
+	6.Eve Online---Multiplayer Game
+	7.Bit Torrent
+	8.Industrial Light And Magic
+	9.Maya 3D
+	10.NetFlix
+	11.Intel
+	12.cisco
+	13.hp
+	14.Seagate
+	15.Qualcomm
+	16.IBM
+	17.NLP----Natural Language Processing
+	18.Excel & spreadsheet
+	19.Data Mining
+
+Applicaton Of Python:
+===================
+
+1.Software Develapement----(Application & Websites)
+2.System Programming
+3.GUI(Graphics User Interface)---Desktop Application
+4.Internal Scripting(Develape Server & Client Relationship)
+
+CGI-----Common Gateway Interface(Upload photo to server).
+
+5.Database Programming(MySQL,MS-SQL,Post GRE SQL,SQL Lite)
+
+6.Data Science
+7.Machine Learning
+8.Artificial Intelligence
+9.Games
+10.Serial Port Communications
+11.Image Processing
+12.Robots
+
+
+Features:
+========
+
+1.High Level 
+2.Simple
+3.Open Source
+4.GUI Programming
+5.Large Standard Library
+6.Expressive Language
+7.Object Oriented
+8.Interpreter
+9.Platform Indepentend(Run Different os)
+
+Compiler
+========
+Source code-->Compiler--->obj code--->Interpreter---->Exe file
+
+Interpreter:
+==========
+Code-->Interpreter--->Exe File
+
+
+software availability:
+======================
+1.command prompt(can't save)#shell mode
+2.notepad(name.py)+command prompt
+3.shell mode
+4.script mode(idle)
